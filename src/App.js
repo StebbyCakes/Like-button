@@ -1,28 +1,23 @@
 import { Component, Fragment } from 'react';
 import './App.css';
-var counter = 0;
 class App extends Component {
-// constructor(props){
-//   super(props);
-//   this.state = {
-//     plus: [],
-//   }
-//   this.plus = this.plus.bind(this);
+
+constructor(props) {
+  super(props);
+
+  this.state = { //state is just an object with key value pairs
+    likes: 0,
+  }
+  this.addLike = this.addLike.bind(this);
+}
+addLike(){
+this.setState((state,props) =>({ // parens first because if I started with curly brackets it wouldnt actually give me an object
+  likes: state.likes + 1
+}));
 }
 
-function App() {
-  function plus(){
-      alert(counter += 1)
-      document.getElementById('increment-btn').value = "{counter} Likes"
-      }
-  return (
-
-    <div className="App">
-      <button id="increment-btn" onClick= {()=>{this.plus}}>{counter} Likes</button>
-    </div>
-  );
-
-
+render(){
+  return <button onClick={this.addLike}>{this.state.likes}{this.state.likes === 1 ? ' like' : ' likes'}</button> // curly brackets because we are using javascript
 }
 }
 

@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import { Component, Fragment } from 'react';
 import './App.css';
+var counter = 0;
+class App extends Component {
+// constructor(props){
+//   super(props);
+//   this.state = {
+//     plus: [],
+//   }
+//   this.plus = this.plus.bind(this);
+}
 
 function App() {
+  function plus(){
+      alert(counter += 1)
+      document.getElementById('increment-btn').value = "{counter} Likes"
+      }
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button id="increment-btn" onClick= {()=>{this.plus}}>{counter} Likes</button>
     </div>
   );
+
+
+}
 }
 
 export default App;

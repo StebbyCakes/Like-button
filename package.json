@@ -2,7 +2,7 @@
   "name": "like-button",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://StebbyCakes.github.io/like-button",
+  "homepage": "https://stebbycakes.github.io/Like-button/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
